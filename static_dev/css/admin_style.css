@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+}
+header{
+    background-image: url(images/background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+footer ul{
+    display: none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+header ul li a{
+    margin-right: 1vw;
+    font-size: 0.9vw;
+    padding-bottom: 0.3vw;
+    color: white;
+}
+header ul li a:hover {
+    border-bottom: 0.1vw solid #27cdf0;
+
+  }
+header h1{
+    margin: 0;
+    padding-top: 1.4vw;
+    font-size: 2vw;
+}
+header p{
+    margin: 0;
+    font-size: 1.1vw;
+    padding-top: 1vw;
+}
+header a{
+    font-size: 1.1vw;
+}
+#active{
+    border-bottom: 0.1vw solid #27cdf0;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+footer{
+    background: #2f2b35;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+footer ul li:hover{
+    color: #a7a7a7;
+}
+footer p{
+    margin: 0;
+    font-size: 1.1vw;
+}
+footer ul li{
+    font-size: 0.9vw;
+}
+footer ul{
+    padding: 0;
+    width: 30%;
+    justify-content: space-around;
+    padding-bottom: 2vw;
+}
+.navbar{
+    display: none;
+}
+@media (max-width: 576px) { 
+    ul{
+        display: flex;
+        padding-top: 7vw;
+        padding-bottom: 7vw;
+    }
+    h2{
+        padding-top: 5vw;
+    }
+    header p{
+        font-size: 3.5vw;
+    }
+    header ul li a{
+        font-size: 2vw;
+    }
+    h2{
+        padding-top: 12vw;
+    }
+    header h1{
+        font-size: 9vw;
+        padding-top: 4.4vw;
+    }
+    header{
+        background-size: unset;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    header ul li a{
+        margin-right: 4vw;
+        font-size: 3.5vw;
+    }
+    footer{
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+        padding-left: 4vw;
+        padding-right: 18vw;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    footer p{
+        font-size: 4vw;
+    }
+    .navbar{
+        display: flex;
+        background: #2f2b35 !important;
+    }
+    td{
+        font-size: 2.5vw;
+    }
+    button.btn.btn-primary{
+        padding: 0.5vw 2vw;
+    }
+    button.btn.btn-success{
+        padding: 0.5vw 2vw;
+    }
+    button.btn.btn-danger{
+        padding: 0.5vw 2.5vw;
+    }
+    button.btn.btn{
+        font-size: 2vw;
+    }
+ }
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) { 
+    h2{
+        padding-top: 7vw;
+    }
+    ul{
+        display: flex;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+    header ul li a{
+        margin-right: 5vw;
+        font-size: 3vw;
+    }
+    header p{
+        font-size: 3.5vw;
+    }
+    header h1{
+        font-size: 9vw;
+        padding-top: 4.4vw;
+    }
+    header{
+        background-size: unset;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    footer{
+        padding-top: 8vw;
+        padding-bottom: 8vw;
+        padding-left: 4vw;
+        padding-right: 18vw;
+    }
+    footer p{
+        font-size: 2.5vw;
+    }
+ }
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) { 
+    h2{
+        padding-top: 15vw;
+    }
+    button.btn.btn{
+        font-size: 2vw;
+    }
+    ul{
+        display: flex;
+    }
+    header ul li a{
+        font-size: 1.9vw;
+    }
+    header p{
+        font-size: 1.6vw;
+    }
+    header h1{
+        font-size: 5vw;
+        padding-top: 4.4vw;
+    }
+    header{
+        background-size: unset;
+        height: 62vw;
+    }
+    .navigation{
+        justify-content: space-around;
+    }
+    footer{
+        padding-top: 9vw;
+        padding-bottom: 9vw;
+        padding-left: 4vw;
+        padding-right: 18vw;
+    }
+    footer p{
+        font-size: 2vw;
+    }
+ }
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) { 
+    header h1 {
+        font-size: 3.5vw;
+    }
+    header p {
+        font-size: 1.2vw;
+    }
+    header ul li {
+        font-size: 1.3vw;
+    }
+    header a {
+        font-size: 1.6vw;
+    }
+    input {
+        font-size: 1.2vw;
+        padding: 1vw;
+    }
+    footer ul li {
+        font-size: 1.4vw;
+    }
+    footer p {
+        margin: 0;
+        font-size: 1.6vw;
+    }
+ }
