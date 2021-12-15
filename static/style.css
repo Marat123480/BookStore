@@ -1,0 +1,1159 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+}
+header{
+    background-image: url('/static/images/background.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+tr{
+    display: flex;
+    flex-direction: column;
+}
+input .form-control{
+    width: 13vw;
+}
+.col-md-4{
+    padding-top: 10vw;
+}
+footer ul{
+    display: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+header ul li a{
+    margin-right: 1vw;
+    font-size: 0.9vw;
+    padding-bottom: 0.3vw;
+    color: white;
+}
+header ul li a:hover {
+    border-bottom: 0.1vw solid #27cdf0;
+
+  }
+header h1{
+    margin: 0;
+    padding-top: 1.4vw;
+    font-size: 2vw;
+}
+header p{
+    margin: 0;
+    font-size: 1.1vw;
+    padding-top: 1vw;
+}
+header a{
+    font-size: 1.1vw;
+}
+#active{
+    border-bottom: 0.1vw solid #27cdf0;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.busket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.busket img{
+    width: 2vw;
+    padding-right: 0.5vw;
+}
+.busket #basket{
+    background: none !important;
+}
+.busket a{
+    background: gray;
+    color: white;
+    border-radius: 2vw;
+    padding: 0.1vw;
+}
+.details{
+    padding: 9vw 11vw;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.details p{
+    font-size: 1.4vw;
+    font-style: italic;
+}
+.details h2{
+    font-size: 4vw;
+    margin: 0;
+    padding-bottom: 2vw;
+}
+.details a{
+    background: #2f2b35;
+    color: white;
+    padding: 0.6vw 1.5vw;
+    border-radius: 2vw;
+    font-size: 1.1vw;
+}
+.find{
+    color: white;
+}
+.find a{
+    background: #2f2b35;
+    color: white;
+    text-align: center;
+    border-radius: 2vw;
+    padding: 0.7vw 3vw;
+    font-size: 0.8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.find img{
+    width: 0.8vw;
+    padding-right: 1vw;
+}
+.find form{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 17vw;
+    padding-right: 17vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+input{
+    background: #edf3f4;
+    border: 0;
+    border-radius: 0.5vw;
+    width: 25%;
+    font-size: 1vw;
+    padding-left: 0.2vw;
+}
+.popular{
+    background-color: #edf3f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4vw;
+}
+.popular h3{
+    font-size: 1.7vw;
+    margin: 0;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 84%;
+}
+.card{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+}
+.card img{
+    width: 16.3vw;
+    height: 23vw;
+}
+.card h2{
+    font-size: 1vw;
+    margin: 0;
+    padding: 2vw 0 0.4vw;
+    text-align: center;
+}
+small{
+    color: #A7A7A7;
+    padding: 0.4vw 0;
+    font-size: 0.9vw;
+}
+.card a{
+    color: black;
+    font-size: 0.8vw;
+    width: 50%;
+    border: 0.1vw solid #9A9A9A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card span{
+    padding-bottom: 1vw;
+    font-size: 1.1vw;
+}
+.card a{
+    padding: 0.5vw 0;
+}
+.card a:first-child{
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+.card a:last-child{
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+.card a img{
+    box-shadow: none;
+    width: 1.2vw;
+    padding-right: 0.5vw;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+.book-info{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.book-info h2{
+    margin: 0;
+    font-size: 1.6vw;
+}
+.book-info h3{
+    color: #a7a7a7;
+    font-size: 1.2vw;
+}
+.book-info p{
+    text-align: justify;
+    color: #757575;
+    padding-bottom: 2vw;
+    padding-top: 1.5vw;
+    margin: 0;
+    font-size: 1.1vw;
+}
+.book-info a{
+    font-size:1vw;
+    background: #2f2b35;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    color: white;
+    border-radius: 2vw;
+    padding: 0.5vw;
+}
+.book-info small{
+    color: #757575;
+    font-size: 0.9vw;
+    font-style: oblique;
+}
+.book-photo{
+    width: 23%;
+}
+.book-photo img{
+    width: 22vw;
+}
+.sail{
+    padding-left: 2vw;
+    width: 22%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("/static/images/sail-bg.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    border-radius: 1vw;
+    box-shadow: 0 0 0.8vw rgb(0 0 0 / 40%);
+}
+.sail h2{
+    font-size: 1.2vw;
+    margin: 0;
+    padding: 1vw 0;
+}
+.sail span{
+    background-color: #27c8ea;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2vw;
+    font-size: 1.1vw;
+}
+.action{
+    background: url(images/action-bg.jpg);
+    padding-top: 7.1vw;
+    padding-bottom: 7.1vw;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.action a{
+    color: white;
+    font-size: 1vw;
+    padding-top: 1.2vw;
+}
+.action a:hover{
+    color: #27c8ea;
+}
+.action h2{
+    font-size: 2.4vw;
+    margin: 0;
+}
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+}
+.column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+.column img{
+    width: 4.2vw;
+}
+.column h2{
+    margin: 0;
+    font-size: 1.2vw;
+    padding-top: 2vw;
+    padding-bottom: 1.2vw;
+}
+.column p{
+    font-size: 1vw;
+    color: #757575;
+}
+.category-top{
+    display: flex;
+    justify-content: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+.category-top img{
+    width: 80%;
+}
+footer{
+    background: #2f2b35;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+footer ul li:hover{
+    color: #a7a7a7;
+}
+footer p{
+    margin: 0;
+    font-size: 1.1vw;
+}
+footer ul li{
+    font-size: 0.9vw;
+}
+footer ul{
+    padding: 0;
+    width: 30%;
+    justify-content: space-around;
+    padding-bottom: 2vw;
+}
+input.form-control{
+    width: 4vw;
+}
+    img.appear{
+        height: 25vw;
+    }
+.navbar{
+    display: none;
+}
+@media (max-width: 575px) { 
+    input{
+        width: 100%;
+        margin-bottom: 4vw;
+        padding: 2vw;
+        font-size: 3.5vw;
+    }
+    .find form {
+        flex-direction: column;
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+    ul{
+        display: flex;
+        padding-top: 7vw;
+        padding-bottom: 7vw;
+    }
+    .details {
+        align-items: center;
+        padding: 2vw 11vw;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    header p{
+        font-size: 3.5vw;
+    }
+    header h1{
+        font-size: 9vw;
+        padding-top: 4.4vw;
+    }
+    header{
+        background-size: unset;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .busket {
+        padding-top: 2vw;
+        width: 4vw;
+    }
+    .busket a {
+        font-size: 4vw;
+        padding: 0.5vw;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .busket img{
+        width: 7vw;
+    }
+    .details p{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .details h2{
+        font-size: 13vw;
+        text-align: center;
+    }
+    .details a{
+        font-size: 4vw;
+        padding: 1.6vw 2.5vw;
+    }
+    .find a{
+        font-size: 3.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1.7vw 3vw;
+    }
+    .find img{
+        width: 3vw;
+        padding-right: 1.5vw;
+    }
+    .card img {
+        width: 78.3vw;
+        height: 82vw;
+    }
+    .popular h3{
+        font-size: 6vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    .card h2{
+        font-size: 5vw;
+        text-align: center;
+    }
+    small{
+        font-size: 4vw;
+    }
+    .card span{
+        font-size: 5vw;
+    }
+    .card a{
+        font-size: 4vw;
+    }
+    .card a img{
+        width: 5vw;
+        padding-right: 2.5vw;
+    }
+    .card {
+        margin-bottom: 4vw;
+        padding: 4vw;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-info{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 71%;
+    }
+    .book-photo{
+        width: 71%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .sail{
+        margin-top: 7vw;
+        width: 67.2%;
+        height: 82vw;
+    }
+    .book-info h3 {
+        font-size: 5vw;
+        margin: 0;
+        padding: 1.5vw 0;
+    }
+    .book-info h2 {
+        font-size: 6.6vw;
+    }
+    .book-info small {
+        font-size: 3.8vw;
+    }
+    .book-info p{
+        font-size: 3.3vw;
+    }
+    .book-info a{
+        font-size: 3.9vw;
+        padding: 1.5vw;
+    }
+    header ul li a{
+        margin-right: 4vw;
+        font-size: 2.5vw;
+    }
+    .book-photo img{
+        width: 60vw;
+        padding-top: 4vw;
+    }
+    .sail span{
+        font-size: 3vw;
+    }
+    .sail h2{
+        font-size: 3.4vw;
+        padding: 4vw 0;
+    }
+    .action{
+        background-size: unset;
+        padding-top: 14.1vw;
+        padding-bottom: 14.1vw;
+        background-repeat: no-repeat;
+    }
+    .action h2{
+        font-size: 7vw;
+        text-align: center;
+        width: 50%;
+    }
+    .action a{
+        font-size: 3vw;
+        padding-top: 3.2vw;
+    }
+    .services{
+        flex-direction: column;
+    }
+    .column h2{
+        font-size: 5vw;
+    }
+    .column p{
+        font-size: 4vw;
+    }
+    .column img{
+        width: 15.2vw;
+    }
+    .column{
+        padding: 8vw;
+        width: 65%;
+    }
+    .category-top img{
+        width: 86vw;
+        height: 10vw;
+    }
+    footer{
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+        padding-left: 4vw;
+        padding-right: 18vw;
+    }
+    footer p{
+        font-size: 4vw;
+    }
+    .navbar{
+        display: flex;
+        background: #2f2b35 !important;
+    }
+    td {
+        font-size: 4vw;
+    }
+    button.btn.btn-success{
+        padding: 0.5vw 2vw;
+    }
+    button.btn.btn-danger{
+        padding: 0.5vw 2.5vw;
+    }
+    tr{
+        display: flex;
+        flex-direction: column;
+    }
+    input.form-control{
+        width: 12vw;
+    }
+    table{
+        display: flex;
+        flex-direction: column;
+    }
+ }
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) { 
+    input{
+        width: 100%;
+        margin-bottom: 4vw;
+        padding: 2vw;
+        font-size: 3.5vw;
+    }
+    .find form {
+        flex-direction: column;
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+    ul{
+        display: flex;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+    header ul li a{
+        margin-right: 5vw;
+    font-size: 3vw;
+    }
+    .details {
+        align-items: center;
+        padding: 3vw 11vw;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    header p{
+        font-size: 3.5vw;
+    }
+    header h1{
+        font-size: 9vw;
+        padding-top: 4.4vw;
+    }
+    header{
+        background-size: unset;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .busket {
+        padding-top: 2vw;
+        width: 4vw;
+    }
+    .busket a {
+        font-size: 4vw;
+        padding: 0.5vw;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .busket img{
+        width: 7vw;
+    }
+    .details p{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .details h2{
+        font-size: 10vw;
+        text-align: center;
+    }
+    .details a{
+        font-size: 4vw;
+        padding: 1.6vw 2.5vw;
+    }
+    .find a{
+        font-size: 3.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1.7vw 3vw;
+    }
+    .find img{
+        width: 3vw;
+        padding-right: 1.5vw;
+    }
+    .card img {
+        width: 78.3vw;
+    }
+    .popular h3{
+        font-size: 6vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    .card h2{
+        font-size: 5vw;
+        text-align: center;
+    }
+    small{
+        font-size: 4vw;
+    }
+    .card span{
+        font-size: 5vw;
+    }
+    .card a{
+        font-size: 4vw;
+    }
+    .card a img{
+        width: 5vw;
+        padding-right: 2.5vw;
+    }
+    .card {
+        margin-bottom: 4vw;
+        padding: 4vw;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-info{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 71%;
+    }
+    .book-photo{
+        width: 71%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .sail{
+        margin-top: 7vw;
+        width: 67.2%;
+        height: 82vw;
+    }
+    .book-info h3 {
+        font-size: 5vw;
+        margin: 0;
+        padding: 1.5vw 0;
+    }
+    .book-info h2 {
+        font-size: 6.6vw;
+    }
+    .book-info small {
+        font-size: 3.8vw;
+    }
+    .book-info p{
+        font-size: 3.3vw;
+    }
+    .book-info a{
+        font-size: 3.9vw;
+        padding: 1.5vw;
+    }
+    .book-photo img{
+        width: 60vw;
+        padding-top: 4vw;
+    }
+    .sail span{
+        font-size: 3vw;
+    }
+    .sail h2{
+        font-size: 3.4vw;
+        padding: 4vw 0;
+    }
+    .action{
+        background-size: unset;
+        padding-top: 14.1vw;
+        padding-bottom: 14.1vw;
+        background-repeat: no-repeat;
+    }
+    .action h2{
+        font-size: 6vw;
+        text-align: center;
+        width: 50%;
+    }
+    .action a{
+        font-size: 3vw;
+        padding-top: 3.2vw;
+    }
+    .services{
+        flex-direction: column;
+    }
+    .column h2{
+        font-size: 5vw;
+    }
+    .column p{
+        font-size: 4vw;
+    }
+    .column img{
+        width: 15.2vw;
+    }
+    .column{
+        padding: 8vw;
+        width: 65%;
+    }
+    .category-top img{
+        width: 86vw;
+        height: 10vw;
+    }
+    footer{
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+        padding-left: 4vw;
+        padding-right: 18vw;
+    }
+    footer p{
+        font-size: 4vw;
+    }
+ }
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) { 
+    input{
+        width: 44%;
+        margin-bottom: 4vw;
+        padding: 2vw;
+        font-size: 1.5vw;
+        margin: 0;
+    }
+    .find form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 15vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+    ul{
+        display: flex;
+    }
+    header ul li a{
+        font-size: 1.9vw;
+    }
+    .details {
+        align-items: center;
+        padding: 9vw 11vw;
+        height: 55%;
+        justify-content: center;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    header p{
+        font-size: 1.6vw;
+    }
+    header h1{
+        font-size: 5vw;
+        padding-top: 4.4vw;
+    }
+    header{
+        background-size: unset;
+        height: 62vw;
+    }
+    .busket {
+        padding-top: 2vw;
+        width: 4vw;
+    }
+    .busket a {
+        font-size: 2vw;
+        padding: 0.3vw;
+    }
+    .busket img{
+        width: 5vw;
+    }
+    .navigation{
+        justify-content: space-around;
+    }
+    .details p{
+        font-size: 2.7vw;
+        text-align: center;
+    }
+    .details h2{
+        font-size: 7.9vw;
+        text-align: center;
+    }
+    .details a{
+        font-size: 2.4vw;
+        padding: 1vw 2.5vw;
+    }
+    .find a{
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42%;
+        padding: 1.7vw 3vw;
+    }
+    .find img {
+        width: 1.5vw;
+        padding-right: 1.5vw;
+    }
+    .card img {
+        width: 29.3vw;
+    }
+    .popular h3{
+        font-size: 3.4vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    .card h2{
+        font-size: 1.9vw;
+        text-align: center;
+    }
+    small{
+        font-size: 1.6vw;   
+    }
+    .card span{
+        font-size: 2.6vw;
+    }
+    .card a{
+        font-size: 1.4vw;
+    }
+    .card a img{
+        width: 2vw;
+        padding-right: 0.5vw;
+    }
+    .card {
+        margin-bottom: 4vw;
+        padding: 4vw;
+    }
+    .book-info{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 30%;
+    }
+    .book-photo{
+        width: 30%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .sail{
+        margin-top: 7vw;
+        width: 30.2%;
+        height: 43vw;
+    }
+    .book-info h3 {
+        font-size: 2.4vw;
+        margin: 0;
+        padding: 1.5vw 0;
+    }
+    .book-info h2 {
+        font-size: 3.2vw;
+    }
+    .book-info small {
+        font-size: 1.8vw;
+    }
+    .book-info p{
+        font-size: 2vw;
+    }
+    .book-info a{
+        font-size: 2vw;
+        width: 49%;
+        padding: 0.5vw;
+    }
+    .book-photo img{
+        width: 30vw;
+        height: 46vw;
+        padding-top: 4vw;
+    }
+    .sail span{
+        font-size: 1.4vw;
+    }
+    .sail h2{
+        font-size: 2.4vw;
+        padding: 1vw 0;
+    }
+    .action{
+        background-size: unset;
+        padding-top: 12.1vw;
+        padding-bottom: 12.1vw;
+        background-repeat: no-repeat;
+    }
+    .action h2{
+        font-size: 4.6vw;
+        text-align: center;
+        width: 50%;
+    }
+    .action a{
+        font-size: 2vw;
+        padding-top: 2.2vw;
+    }
+    .column h2{
+        font-size: 2.4vw;
+    }
+    .column p{
+        font-size: 1.6vw;
+    }
+    .column img {
+        width: 6.8vw;
+        padding-bottom: 1vw;
+    }
+    .category-top img{
+        width: 86vw;
+        height: 10vw;
+    }
+    footer{
+        padding-top: 9vw;
+        padding-bottom: 9vw;
+        padding-left: 4vw;
+        padding-right: 18vw;
+    }
+    footer p{
+        font-size: 2vw;
+    }
+ }
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) { 
+    header h1 {
+        font-size: 3.5vw;
+    }
+    header p {
+        font-size: 1.2vw;
+    }
+    header ul li {
+        font-size: 1.3vw;
+    }
+    .busket img {
+        width: 2.5vw;
+    }
+    .busket a {
+        padding: 0.5vw;
+    }
+    header a {
+        font-size: 1.6vw;
+    }
+    .details p {
+        font-size: 2.1vw;
+    }
+    .details h2 {
+        font-size: 7.9vw;
+    }
+    .details a {
+        font-size: 1.8vw;
+    }
+    .find form {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    input {
+        font-size: 1.2vw;
+        padding: 1vw;
+    }
+    .find a {
+        font-size: 1.2vw;
+    }
+    .find img {
+        width: 1.2vw;
+    }
+    .popular h3 {
+        font-size: 2.6vw;
+    }
+    .card h2 {
+        font-size: 1.4vw;
+    }
+    small{
+        font-size: 1.2vw;
+    }
+    .card span{
+        font-size: 2vw;
+    }
+    .card a{
+        font-size: 1vw;
+    }
+    .card a img {
+        width: 1.5vw;
+        padding-right: 0.7vw;
+    }
+    .card img {
+        width: 21.3vw;
+        height: 23vw;
+    }
+    .cards {
+        width: 100%;
+    }
+    .book-info {
+        width: 32%;
+    }
+    .book-info h3{
+        font-size: 1.8vw;
+        margin: 0;
+        padding: 1.2vw 0;
+    }
+    .book-info h2{
+        font-size: 2.7vw;
+    }
+    .book-info small{
+        font-size: 1.3vw;
+        padding: 0.6vw 0;
+    }
+    .book-info p{
+        font-size: 1.5vw;
+    }
+    .book-info a{
+        font-size: 1.4vw;
+    }
+    .book-photo img {
+        width: 25.5vw;
+    }
+    .sail {
+        width: 26%;
+    }
+    .sail span{
+        font-size: 1.4vw;
+    }
+    .sail h2 {
+        font-size: 1.8vw;
+    }
+    .action{
+        padding-top: 9.1vw;
+        padding-bottom: 8.1vw;
+    }
+    .action h2{
+        font-size: 3.6vw;
+    }
+    .action a{
+        font-size: 1.4vw;
+    }
+    .column h2{
+        font-size: 1.8vw;
+    }
+    .column p{
+        font-size: 1.4vw;
+    }
+    .column img {
+        width: 6.2vw;
+    }
+    .category-top img {
+        width: 100%;
+    }
+    footer ul li {
+        font-size: 1.4vw;
+    }
+    footer p {
+        margin: 0;
+        font-size: 1.6vw;
+    }
+ }
