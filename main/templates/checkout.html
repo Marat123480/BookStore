@@ -1,0 +1,29 @@
+{% extends 'bookstore.html'  %}
+{% load static  %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-sm" style="background-color: white;">
+    {% if messages %}
+      {% for message in messages %}
+        {% if message.tags == 'error' %}
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% else %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endif %}
+      {% endfor%}
+    {% endif %}
+  <h3 class="text-center mt-5 mb-5">Форма заказа</h3>
+  <form action="{% url 'make_order' %}" method="POST">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" class="btn btn-success btn-block mb-3 mt-3" value="Оформить заказ">
+  </form>
+</div>
+
+{% endblock content %}

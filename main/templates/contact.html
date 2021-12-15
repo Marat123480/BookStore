@@ -1,0 +1,30 @@
+{% extends 'bookstore.html'  %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+  <div class="container-sm">
+        <div class="row">
+            <div class="col-6">
+                <form action="{% url 'send_message' %}" method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <input type="submit" class="btn btn-dark btn-block mb-3 mt-3" value="Send">
+                </form>
+            </div>
+            <div class="col-6">
+                <p>This Contact page uses “Contact Form” page template. You can some contents on your contact page and it will be displayed here.</p>
+
+                <p>There’s nothing you can’t find on the internet, including foodstuffs, clothes and household goods. Do your homework to get the best deals online. This article will give you great online shopping advice.</p>
+
+                <p>Before making a purchase, compare prices on several websites. Look for special coupons and offers on these websites to make sure you are getting the best deal possible. Also look into what it will cost for the shipping on your items and if there are free shipping options available to you.</p>
+
+                <p>A great tip to remember when you’re thinking about online shopping is to make sure the site is legit. You don’t want to be giving your credit card information away to someone who could potentially scam you. Always look at the site to tell if it’s professional and safe to use.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <iframe width="100%" height="500" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;q=-6.903932%2C107.610344&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=near&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+
+{% endblock content %}

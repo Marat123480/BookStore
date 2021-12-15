@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Загрузка статической папки(в ней фото, css и js)-->
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+    <!--NAVIGATION MENU-->
+    <header>
+        <div class="navigation">
+            <div class="logo">
+                <h1>Bookie</h1>
+                <p>Just another Python site</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a id="active" href="/">HOME</a></li>
+                    <li><a href="{% url 'login' %}">MY ACCOUNT</a></li>
+                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                    <!--Проверка на атворизованного польхователя-->
+                    {% if request.user.is_authenticated %}
+                        <li><a href="admin">{{request.user|upper}}</a></li>
+                        <li><a href="{% url 'logout' %}">LOG OUT</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="busket">
+                <a id="basket" href="{% url 'basket' %}"><img src="{% static 'images/wicker-basket.png' %}" alt=""></a>
+                <a href="{% url 'basket' %}">{{ cart.products.count }}</a>
+            </div>
+        </div>
+        <div class="details">
+            <p>Writing to improve your imagination</p>
+            <h2>Let's Writing</h2>
+            <a href="">See more</a>
+        </div>
+    </header>
+    <section>
+        <!--POPULAR BOOKS-->
+        <div class="popular">
+            <h3>Popular Books</h3>
+            <div class="cards">
+                <!--Цикл для вывода продуктов-->
+                {% for product in products %}
+                <div class="card main">
+                    <img class="appear" src="{{ product.image.url }}" alt="">
+                    <h2>{{product.title}}</h2>
+                    <small>{{product.author}}</small>
+                    <span>{{product.price}} тенге</span>
+                    <div class="buttons">
+                        <a href="{{ product.get_absolute_url }}"><img src="{% static 'images/telegram.png' %}" alt="">DETAIL</a>
+                        <a href="{% url 'add_to_basket' ct_model='product' slug=product.slug %}"><img src="{% static 'images/shopping-cart.png' %}" alt="">BUY</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!--FEATURED BOOKS-->
+        <div class="container">
+            <div class="book-info">
+                <h3>Featured Book</h3>
+                <h2>The Complete Idiots Guide to Graphic Design</h2>
+                <small>Anggi Krisna</small>
+                <p>From advanced selectors to generated content to web fonts, and from gradients, shadows, and rounded
+                    corners to elegant animations, CSS3 hold a universe of creative possibilities. No one can better
+                    guide you through these galaxies than Dan Cederholm.</p>
+                <a href="">Get This Book</a>
+            </div>
+            <div class="book-photo">
+                <img src="{% static 'images/feature-book.jpg' %}" alt="">
+            </div>
+            <div class="sail">
+                <span>feature category</span>
+                <h2>A Complete Idiot Guide to Programming</h2>
+            </div>
+        </div>
+
+        <!--LIBRARY-->
+        <div class="action">
+            <h2>Browse Through Our Complete Library</h2>
+            <a href="">BROWSE COLLECTION →</a>
+        </div>
+
+        <!--SERVICES-->
+        <div class="services">
+            <div class="column">
+                <img src="{% static 'images/book.png' %}" alt="">
+                <h2>Tons of Books</h2>
+                <p>From advanced selectors to generated content to web fonts, and from gradients, shadows, and rounded
+                    corners. to elegant animations.</p>
+            </div>
+            <div class="column">
+                <img src="{% static 'images/pencil.png' %}" alt="">
+                <h2>Hundreds of Authors</h2>
+                <p>To elegant animations. , CSS3 holds a universe of creative possibilities. No one can better guide you
+                    through.</p>
+            </div>
+            <div class="column">
+                <img src="{% static 'images/bookmark.png' %}" alt="">
+                <h2>Easily Bookmarked</h2>
+                <p>Shadows, and rounded corners. to elegant animations. , CSS3 holds a universe of creative
+                    possibilities. No one can better guide you through.</p>
+            </div>
+        </div>
+        <!--CATEGORIES-->
+        <div class="popular">
+            <h3>Categories</h3>
+            <div class="cards">
+                <!--Цикл для вывода категорий-->
+                {% for category in categories %}
+                <div class="card alga" >
+                    <img src="{{category.image.url}}" alt="">
+                    <h4>{{category.name}}</h4>
+                    <p>Количество книг: <b>{{category.count}}</b></p>
+                    <div class="buttons">
+                        <a href="{{ category.url }}">Open</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        
+        <!--COOK CATEGORY-->
+        <div class="category-top">
+            <img src="{% static 'images/cook-book.jpg' %}" alt="">
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+        <ul>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>About Us</li>
+            <li>TOS</li>
+            <li>Contact Us</li>
+        </ul>
+        <p>Made by <b>© Amantay Marat</b> and <b>Aset Serikzhan</b> from Group <b>IT2CCO-2112</b></p>
+    </footer>
+</body>
+</html>

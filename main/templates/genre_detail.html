@@ -1,0 +1,40 @@
+{% extends 'bookstore.html'  %}
+{% load static  %}
+{% block content %}
+<div class="row">
+         <div class="col-md-12" style="text-align: center">
+            <h3 id="genre_name">{{ genre.name }}</h3>
+            <hr>
+         </div>
+    </div>
+<div class="container">
+    <div class="row" style="width: 100%; padding: 0">
+         <div class="container">
+                <div class="row" style="padding: 0">
+                    {% for product in category_books %}
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem; text-align: center">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                            <div class="card-body" style="width: 100%">
+                              <h5 class="card-title">{{product.title}}</h5>
+                                <small>{{product.author}}</small>
+                                <br>
+                                <span>{{product.price}} тенге</span>
+                              <div class="buttons" style="background: white">
+                                <a style="background: white" href="{{ product.get_absolute_url }}"><img src="{% static 'images/telegram.png' %}" alt="">DETAIL</a>
+                                <a style="background: white" href="{% url 'add_to_basket' ct_model='product' slug=product.slug %}"><img src="{% static 'images/shopping-cart.png' %}" alt="">BUY</a>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                            {% endfor %}
+                </div>
+         </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
+

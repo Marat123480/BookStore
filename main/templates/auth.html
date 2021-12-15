@@ -1,0 +1,50 @@
+<!--Импортируем html код с файла bookstore.html(чтобы каждый раз не писать head html body footer и тд)-->
+{% extends 'bookstore.html'  %}
+<!--Обозначаем что нужно вставить вместо block content в bookstore.html-->
+{% block content %}
+    <div class="container-sm" style="background-color: white;">
+     <div class="row">
+         <div id="reg" class="col-12 flex-column align-items-center" style="display: flex">
+            <h2>Register</h2>
+            <form class="forms" method="POST" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <!--Отображение формы для пользователя-->
+                    {{form.username}}
+                </div>
+                <div class="mb-3">
+                    {{form.password1}}
+                </div>
+                <div class="mb-3">
+                    {{form.password2}}
+                </div>
+                <div class="mb-3">
+                    {{form.first_name}}
+                </div>
+                <div class="mb-3">
+                    {{form.last_name}}
+                </div>
+                <button type="submit" class="btn btn-dark">Register</button>
+                <a href="{% url 'login' %}">Log in</a>
+                <br>
+                {{form.errors}}
+              </form>
+        </div>
+
+     </div>
+    </div>
+    <script>
+		var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='Username';
+		form_fields[2].placeholder='Enter password';
+        form_fields[3].placeholder='Re-password';
+        form_fields[4].placeholder='First name';
+        form_fields[5].placeholder='Last name';
+
+
+		for (var field in form_fields){
+			form_fields[field].className += ' form-control'
+		}
+	</script>
+{% endblock content %}
+

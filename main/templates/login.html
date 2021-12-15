@@ -1,0 +1,43 @@
+{% extends 'bookstore.html'  %}
+
+{% block content %}
+    <div class="container-sm" style="background-color: white;">
+     <div class="row">
+         <div id="reg" class="col-12 flex-column align-items-center" style="display: flex">
+            <h2>Login</h2>
+            <form class="forms" method="POST" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{form.username}}
+                </div>
+                <div class="mb-3">
+                    {{form.password1}}
+                </div>
+                <button type="submit" class="btn btn-dark">Login</button>
+                <a href="{% url 'auth' %}">Register</a>
+                <br>
+                {{form.errors}}
+              </form>
+        </div>
+
+     </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <script>
+		var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='Username';
+		form_fields[2].placeholder='Enter password';
+
+
+		for (var field in form_fields){
+			form_fields[field].className += ' form-control'
+		}
+	</script>
+{% endblock content %}
+

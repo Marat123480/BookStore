@@ -1,0 +1,62 @@
+{% extends 'bookstore.html'  %}
+{% load static  %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img id="book_img" src="{{ book.image.url }}" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h3>{{ book.title }}</h3>
+            {% for category in categories %}
+                {% if book.category.name == category.name %}
+                    <p>Жанр: <a href="{{ category.url }}">{{book.category}}</a></p>
+                {% endif %}
+            {% endfor %}
+            <p>Цена: {{ book.price }} тенге</p>
+            <p>Описание: {{ book.description }}</p>
+            <p><b>Автор: {{book.author}}</b></p>
+            <p><b>Количество страниц: {{book.length}}</b></p>
+            {% if book.quantity == 0 %}
+                <p style="color: #ff0000">Нету в наличии</p>
+            {% else %}
+            <hr>
+            <a href="{% url 'add_to_basket' ct_model=ct_model slug=book.slug %}"><button class="btn btn-danger">Добавить в корзину</button></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="row">
+         <div class="col-md-12" style="text-align: center">
+            <h3>Похожие книги</h3>
+            <hr>
+         </div>
+    </div>
+<div class="container">
+    <div class="row" style="width: 100%; padding: 0">
+         <div class="container">
+                <div class="row" style="padding: 0">
+                    {% for product in products %}
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem; text-align: center">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                            <div class="card-body" style="width: 100%">
+                              <h5 class="card-title">{{product.title}}</h5>
+                                <small>{{product.author}}</small>
+                                <br>
+                                <span>{{product.price}} тенге</span>
+                              <div class="buttons" style="background: white">
+                                <a style="background: white" href="{{ product.get_absolute_url }}"><img src="{% static 'images/telegram.png' %}" alt="">DETAIL</a>
+                                <a style="background: white" href="{% url 'add_to_basket' ct_model='product' slug=product.slug %}"><img src="{% static 'images/shopping-cart.png' %}" alt="">BUY</a>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    {% endfor %}
+                </div>
+         </div>
+    </div>
+</div>
+
+{% endblock content %}
+

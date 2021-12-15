@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static  %}
+    <link href="{% static 'css/bootstrap-5.1.1-dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'css/bootstrap-5.1.1-dist/js/bootstrap.bundle.js' %}"></script>
+    <title>Document</title>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100%">
+    <div id="login" class="container-fluid d-flex justify-content-evenly" style="width: 100%;">
+        <header>
+            <div class="navigation">
+                <nav class="navbar navbar-light bg-light fixed-top">
+                    <div id="head" class="container-fluid">
+                        <div class="logo">
+                            <h1>Bookie</h1>
+                            <p>Just another Python site</p>
+                        </div>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="/">HOME</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">MY ACCOUNT</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'basket' %}">BUSKET</a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                  <div class="desktop-nav">
+                    <div class="logo">
+                        <h1>Bookie</h1>
+                        <p>Just another WordPress site</p>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/">HOME</a></li>
+                            <li><a href="{% url 'login' %}">MY ACCOUNT</a></li>
+                            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                             {% if request.user.is_authenticated %}
+                                <li><a href="/admin/">{{request.user|upper}}</a></li>
+                                <li><a href="{% url 'logout' %}">LOG OUT</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    <div class="busket">
+                        <a id="basket" href="{% url 'basket' %}"><img src="{% static 'images/wicker-basket.png' %}" alt=""></a>
+                        <a href="">{{ cart.products.count }}</a>
+                    </div>
+                  </div>
+            </div>
+        </header>
+    </div>
+    <!--Обозначаем где не нужно брать html код(все что находится в блоке block content не берется)-->
+    {% block content %}
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+        
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/popular-book3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Book name</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success">Add to basket</a>
+                    </div>
+                  </div>
+            </div>
+ 
+        </div>
+        <div class="container-fluid" id="pagination">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+    <!--Закрываем блок)-->
+    {% endblock content %}
+    <footer  id="login-foot">
+        <ul>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>About Us</li>
+            <li>TOS</li>
+            <li>Contact Us</li>
+        </ul>
+        <p>Made by <b>© Amantay Marat</b> and <b>Aset Serikzhan</b> from Group <b>IT2CCO-2112</b></p>
+    </footer>
+
+    <script src="bootstrap-5.1.1-dist/js/bootstrap.js"></script>
+</body>
+</html>
